@@ -1,51 +1,279 @@
-# Priyangshu Dey
+<div align="center">
 
-A minimal white portfolio: lots of white space, one blue (#1f4fff) and an ink sketch of a young man sketching in a notebook on a wooden chair.
+<img src="assets/readme/header.svg" alt="Priyangshu Dey: Building AI that ships. Founder & CEO of AakaarIO, AI engineer, full-stack developer." width="100%">
 
-## Features
+<br>
 
-- **Hero background:** a static faded orange dot grid, soft drifting orange glows, and a soft orange-to-amber glow band in the lower hero that drifts on its own (no cursor reactions). It carries on past the hero and fades into the About section, and pauses when the hero is off screen.
-- **Interactive hero:** a status pill ("open to internships & collabs"), the name as the headline with a hand-drawn orange underline (each letter gets heavier as your cursor gets close; click it, or the EN / Bengali / Hindi switch, to scramble it into Bengali and Hindi script), and "Building AI that ships." revealed letter by letter.
-  - The roles are handwritten annotations with drawn arrows pointing into the sketch: Founder & CEO → the AakaarIO badge, AI Engineer → the idea sketches, Full-Stack Developer → the teacup. Hovering one lights up its part of the sketch, and clicking it acts on that part.
-  - The drawing inks itself in when the page loads, and his head turns slightly toward your cursor.
-  - A blue-ink lens follows your cursor across the drawing.
-  - Blue idea sketches draw themselves from his pen (an agent graph, an API, a rising chart, a rocket), and a caption says what he's sketching.
-  - Click him and he talks in a speech bubble. Click the blue "A" badge on his sleeve for AakaarIO, or click the teacup for a chai refill.
-- **Illustration source:** a traced ink sketch (`sketch_traced.svg`) that the owner supplied, embedded inline. The cut-off toe of the left sneaker was redrawn to complete it.
-- **Journey as ID badges:** each role is an employee ID badge hanging on a lanyard from a rail (Full-Stack Developer Intern, stamped COMPLETED; Software Engineer Intern, stamped PROMOTED; Founder & CEO of AakaarIO on an orange strap, stamped FOUNDER). They sway on their own, swing when your cursor brushes them, can be grabbed and dragged to swing harder, and flip over on click or Enter to show what you did and the stack. The arrow keys nudge them.
-- **The stack:** an isometric pile of six layers (Languages → Cloud & data → Backend → AI / ML → Frontend → Mobile). Hover, tap, focus or use the arrow keys to lift a layer: its tech logos stand on top of it and a detail panel shows what it's for and where it's used. It tours itself until you interact.
-- **Footer:** a deep cobalt footer in serif type: star logo, italic tagline, contact rows, social icons, Explore / Projects / Connect columns, a "Stay in the loop" email box (no backend, so it drafts an email to Priyangshu) and a legal row. Below it, on white paper with a hand-drawn edge, is a **live press conference drawn as a line sketch** (ink outlines, pencil wobble and grey hatching like the hero, with blue and orange accents only): a giant full-width PRIYANGSHU in hand-inked blue outline letters with hatching behind the stage, with the stage, table and crowd overlapping its lower part (letters lift and warm under the cursor; click for a wave and camera flashes). Priyangshu, drawn in bold minimal ink (wavy pompadour, short beard, black open shirt over a white tee), sits at a press table under spotlights with a laptop and microphones. His eyes follow the cursor, he blinks, grins when you hover his face, and winks and says hi when you click it. He is facing seven rows of about 170 journalists in perspective, each tinted on a blend from AakaarIO blue (left) through purple to orange (right), with back rows paler for depth and a faint blue-to-orange wash behind them, with hazy back rows, rim-lit heads, glowing phones, cameras and TV cameras on tripods. Hover a journalist to raise a hand, click to ask a question; he turns toward them and the answer types out (facts from the site). While idle, journalists ask on their own and cameras flash. Broadcast touches: a LIVE tag with a running timecode, and a TV-style lower-third (name, title and the question being answered) that slides in during each answer. **Sound** (Web Audio, footer only, after one click, with a remembered Sound on/off toggle): questions and answers are spoken aloud with the browser's text-to-speech (journalists rotate through different voices; Priyangshu answers in a male English voice, preferring an Indian-English one when available) and the answer types out in sync with the speech; if no voices are available it falls back to a synthetic murmur. Also a reverberant press room with speech-like crowd chatter in stereo that hushes while he answers, a short voice for each question from the journalist's side of the room (rising at the end), his answers through the stage PA, camera shutters on every flash with an occasional flash recharge whine, applause when the name is clicked, and a mic tap when the footer first comes into view.
-- **Sections:** About (AakaarIO and stats), Selected Work (Sentinel, Orion, COCO), How LLM evals work, Journey, Toolkit, Education & credentials, Book a call, and Contact.
-- **LLM evals lab:** an interactive workflow diagram, plus an eval run you can play with (8 test cases, threshold sliders, a ship/block gate, failure clusters, and a v1 vs v2 chart with a table view).
-- **Book a call:** 5 sessions per weekday from 10:00 IST with 30-minute breaks. Choosing a slot opens a pre-filled Google Calendar invite and shows a terminal-style confirmation.
-- **Education (Always learning):** drawn as a study desk. The degree is a hand-inked road of eight semesters (S1 to S8) that draws itself with an orange pen dot up to the current, final semester (S8, marked "you are here"), then a dotted path to a graduation cap with a swinging tassel (Jun 2027); hover a checkpoint for its status. The current semester is set in the code (`SEM` / `cur` in the road script). Core subjects are books on a shelf: hover a spine for the full name, click one to open its details in the right column: summary, topics, an "In my work" note where a project uses it, and three illustrations per subject that rotate automatically (every 13s, paused on hover) with tabs and a "new data" button. Most are live simulations with fresh random data on every run, and the topics each scene demonstrates light up. DSA: binary search on a BST and a sorted array, bubble sort, BFS on a random graph. OOP: class diagram, encapsulation (a BankAccount whose private balance only changes through methods), polymorphic area() calls. DBMS: query pipeline + ER model, B+ tree index lookups, a transfer transaction that sometimes crashes and rolls back. OS: kernel layers, round-robin scheduling with a live Gantt chart, paging with FIFO page faults. Networks: TCP/IP stacks, a TCP handshake with occasional packet loss and retransmit, Dijkstra routing on random link costs. System Design: load-balanced architecture, an LRU cache with hit rate, consistent hashing on a ring. ML: training loop, gradient descent with different learning rates, live linear regression. AI: agent loop, A* on a random maze, minimax on a random game tree. Data Mining: KDD pipeline, live k-means, Apriori association rules. Back or Esc returns to the credentials. Credentials (MERN Full-Stack Web Development, Full Stack Development: Zomato App) are certificate cards taped to the wall with line-sketch icons.
-- **Responsive:** checked at 375px (phone), 768/820px (tablet), 1024px (small laptop) and desktop with no sideways scrolling. Phones and tablets get a Menu button (full-width section list, closes on tap or Esc); the bookshelf shrinks to fit, subject diagrams scroll sideways on small screens, credential and booking cards stack, hero annotations wrap on small laptops, the journey badges snap while swiping, and the cast characters hide below 1000px.
-- **Résumé (07):** a line-drawn printer prints the real résumé page (resume/resume-page1.jpg) when the section scrolls into view; hover the page for a magnifying loupe, click it (or Preview) for a full-screen viewer with the PDF (phones get the page image plus Open PDF). Beside it, a printed receipt summarises the résumé (experience is counted live from Mar 2025) and there is a Download PDF button (resume/Priyangshu_Dey_Resume.pdf). To update: replace the PDF and re-render page 1 to resume-page1.jpg.
-- **The cast:** small original ink characters (bold black-and-white style) live on the section labels at different spots (left, middle, right). Each is a real rig: jointed legs with knees and feet, two-bone IK arms, a head that turns, and props held in the hands that stay upright (coffee cup, tablet, clipboard and pen, phone, laptop, sign). Walking is physics-driven: they speed up and slow down, turn to face where they are going, legs swing with knee bend at a cadence tied to distance (so planted feet don't slide), the body bobs because the lower foot always stays on the ground, arms swing opposite the legs, and they lean into acceleration. Every joint is spring-smoothed, so moves blend with follow-through. They read as 3D: when walking they turn side-on (body narrows, legs and shoulders come together under them, the far arm and leg move behind the torso and shade slightly darker), while for activities the body stays square and only the head turns. Heads rotate with parallax (the nose shifts more than the eyes, the far ear tucks away, the near ear slides back), there is soft shading on the side away from the light, a contact shadow under each foot that fades as the foot lifts, hair that lags and bounces, and a slight shoulder/hip twist in the walk. Each character has a weighted mix of activities it cycles through: About sips coffee, checks a watch, stretches and yawns, looks around; Work walks while reading and swiping the tablet; Evals writes (the ink appears as the pen moves) and taps the pen to their chin; Journey strolls, points at the badges, checks a phone and waves, hands in pockets when idle; Toolkit stands with hands on hips tapping a foot, points at the stack, thinks, scratches their head; Learning types on a stool, leans back with hands behind the head, and gets up to stretch; Book a call waves, takes a phone call, checks the time; Contact bobs a sign (hi! / say hi / hello!) and waves with it lowered. Grab one and they hang from where you grabbed them like a pendulum, legs and arms flailing; let go and they fall and land with a squash and a puff of dust. Click to jump (crouch, take off, land) and get a tip. Hover and they stop, face you, smile and wave with a free hand. Eyes follow the cursor; they blink and breathe. Hidden below 1000px; still for reduced motion.
-- **Favicon:** `favicon.svg` (the bearded ink speaker from the footer on a cobalt tile with an AakaarIO orange spark) plus `apple-touch-icon.png` (180px) for iOS home screens.
-- **Orange accents (used sparingly):** a reading-progress bar along the top, orange markers on section labels and stats, faint orange dot-grain patches in a few section corners (Work, Toolkit, Book, Contact), a soft glow behind Contact, and orange hover touches on project numbers, chips and outline buttons.
-- **Real tech logos:** shown in grayscale, turning to full colour on hover. Loaded from Devicon, with Simple Icons as the fallback.
+<a href="https://priyangshu24.github.io/Priyangshyu__Space/"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open%20%E2%86%97-1f4fff?style=for-the-badge&labelColor=111111"></a>
+<a href="resume/Priyangshu_Dey_Resume.pdf"><img alt="Résumé" src="https://img.shields.io/badge/r%C3%A9sum%C3%A9-pdf-ff6b2c?style=for-the-badge&labelColor=111111"></a>
+<a href="https://linkedin.com/in/priyangshu-dey-60409034b"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-connect-1f4fff?style=for-the-badge&labelColor=111111"></a>
+<a href="mailto:priyangshudey773@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-say%20hi-ff6b2c?style=for-the-badge&labelColor=111111"></a>
 
-## Getting started
+<img alt="No build step" src="https://img.shields.io/badge/build-none-111111?style=flat-square">
+<img alt="Vanilla HTML CSS JS" src="https://img.shields.io/badge/vanilla-HTML%20·%20CSS%20·%20JS-1f4fff?style=flat-square">
+<img alt="Responsive" src="https://img.shields.io/badge/responsive-phone%20→%20desktop-ff6b2c?style=flat-square">
+<img alt="Reduced motion" src="https://img.shields.io/badge/respects-reduced%20motion-111111?style=flat-square">
 
-There is no build step. Serve the folder over HTTP:
+<br><br>
+
+**[Tour](#-tour) · [Try this](#-try-this) · [Run it](#-run-it-locally) · [Make it yours](#-make-it-yours) · [Under the hood](#-under-the-hood) · [Credits](#-credits)**
+
+<sub>A minimal white portfolio in ink: one blue <code>#1f4fff</code>, a little AakaarIO orange <code>#ff6b2c</code>, and line sketches that move.</sub>
+
+</div>
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ At a glance
+
+| | Section | What it is | The twist |
+|---|---|---|---|
+| 00 | [Hero](#hero) | Name, tagline and a traced ink sketch | The drawing inks itself in, his head follows you, ideas sketch out of his pen |
+| 01 | [About](#about) | AakaarIO and the numbers | Odometer stats, orange accents |
+| 02 | [Selected work](#about) | Sentinel, Orion, COCO | Real tech logos that colour in on hover |
+| 03 | [LLM evals lab](#evals) | How evals decide what ships | Run an eval, drag thresholds, watch the gate |
+| 04 | [Journey](#journey) | Roles as ID badges on lanyards | Grab, swing and flip them |
+| 05 | [Toolkit](#toolkit) | An isometric six-layer stack | Lift a layer to see its logos and where it's used |
+| 06 | [Education](#education) | KIIT as a study desk | Click a book: live, randomised architecture simulations |
+| 07 | [Résumé](#resume) | A printer and a receipt | Prints on scroll, loupe on hover, preview + download |
+| 08 | [Book a call](#book) | Pick a slot | Opens a pre-filled Google Calendar invite |
+| 09 | [Footer](#footer) | A live press conference | ~170 journalists, spoken Q&A, press-room sound |
+| ✦ | [The cast](#cast) | Rigged ink characters on every section label | IK arms, physics walk, 3D turns, drag them around |
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ Tour
+
+<sub>Click a section to open it.</sub>
+
+<a id="hero"></a>
+
+<details open>
+<summary><b>00 · Hero</b>: an ink sketch that draws itself</summary>
+<br>
+<img src="assets/readme/hero.jpg" alt="Hero: name, tagline and the ink sketch of a young man sketching on a wooden chair" width="100%">
+
+- A status pill, the name with a hand-drawn orange underline (letters get heavier as your cursor nears; click it or the EN / বাং / हि switch to scramble it into Bengali and Hindi), and "Building AI that ships." revealed letter by letter.
+- Roles are handwritten notes with drawn arrows into the sketch: **Founder & CEO** → the AakaarIO badge, **AI Engineer** → the idea sketches, **Full-Stack Developer** → the teacup. Hover lights up that part; click acts on it.
+- The drawing inks itself in on load, his head turns toward your cursor, a blue lens follows you, and idea sketches (an agent graph, an API, a rising chart, a rocket) draw out of his pen.
+- Click him to talk, the "A" badge for AakaarIO, or the teacup for a chai refill.
+- Behind it: a faded orange dot grid and soft drifting glows that fade into About.
+</details>
+
+<a id="about"></a>
+
+<details>
+<summary><b>01 · About</b> and <b>02 · Selected work</b></summary>
+<br>
+
+- **About:** AakaarIO in a paragraph, a facts table and odometer-style stats.
+- **Selected work:** Sentinel (LLMOps), Orion (AI-native CI/CD) and COCO (local-first AI operator), each with highlights and a row of real tech logos (grayscale, full colour on hover; Devicon with Simple Icons as fallback).
+</details>
+
+<a id="evals"></a>
+
+<details>
+<summary><b>03 · LLM evals lab</b>: run an eval yourself</summary>
+<br>
+<img src="assets/readme/evals.jpg" alt="LLM evals: workflow diagram from dataset to ship" width="100%">
+
+- An interactive workflow (Dataset → Run → Score → Calibrate → Gate → Ship, with a Diagnose & fix loop). Click a stage for details.
+- A playable eval run: 8 test cases, threshold sliders, a ship/block gate, failure clusters, and a v1 vs v2 chart with a table view.
+</details>
+
+<a id="journey"></a>
+
+<details>
+<summary><b>04 · Journey</b>: ID badges you can swing</summary>
+<br>
+<img src="assets/readme/journey.jpg" alt="Journey: employee ID badges hanging on lanyards" width="100%">
+
+- Each role is an ID badge on a lanyard: Full-Stack Developer Intern (COMPLETED), Software Engineer Intern (PROMOTED), Founder & CEO of AakaarIO on an orange strap (FOUNDER).
+- They sway on their own, swing when you brush them, can be grabbed and dragged, and flip on click or Enter to show what you did and the stack. Arrow keys nudge them.
+</details>
+
+<a id="toolkit"></a>
+
+<details>
+<summary><b>05 · Toolkit</b>: an isometric stack</summary>
+<br>
+<img src="assets/readme/stack.jpg" alt="Toolkit: an isometric pile of six technology layers" width="100%">
+
+- Six layers: Languages → Cloud & data → Backend → AI / ML → Frontend → Mobile.
+- Hover, tap, focus or use arrow keys to lift a layer: its logos stand on top and a panel explains what it's for and where it's used. It tours itself until you interact.
+</details>
+
+<a id="education"></a>
+
+<details>
+<summary><b>06 · Education</b>: a study desk with live simulations</summary>
+<br>
+<img src="assets/readme/learning.jpg" alt="Education: a semester road, a bookshelf of subjects and a subject panel" width="100%">
+
+- **Semester road:** eight hand-inked semesters (S1 → S8) that draw themselves up to the current, final semester ("you are here"), then a dotted path to a graduation cap with a swinging tassel.
+- **Bookshelf:** nine subject books. Click one and the right column opens its details: summary, topics, an "In my work" note, and **three illustrations that rotate on their own** (tabs, a "↻ new data" button, pauses on hover). Most are live simulations with fresh random data every run:
+
+| Subject | Illustrations |
+|---|---|
+| DSA | binary search on a BST + array · bubble sort · BFS on a random graph |
+| OOP | class diagram · encapsulation (BankAccount) · polymorphic `area()` |
+| DBMS | query pipeline + ER model · B+ tree lookups · a transfer that may crash and roll back |
+| Operating Systems | kernel layers · round-robin Gantt chart · paging with FIFO faults |
+| Computer Networks | TCP/IP stacks · TCP handshake with packet loss · Dijkstra routing |
+| System Design | load-balanced architecture · LRU cache with hit rate · consistent hashing ring |
+| Machine Learning | training loop · gradient descent at different learning rates · live regression |
+| Artificial Intelligence | agent loop · A* through a random maze · minimax on a random game tree |
+| Data Mining | KDD pipeline · live k-means · Apriori association rules |
+
+- **Credentials:** certificate cards taped to the wall with line-sketch icons.
+</details>
+
+<a id="resume"></a>
+
+<details>
+<summary><b>07 · Résumé</b>: a printer and a receipt</summary>
+<br>
+<img src="assets/readme/resume.jpg" alt="Résumé: a line-drawn printer printing the résumé next to a receipt summary" width="100%">
+
+- A line-drawn printer prints the real résumé page when you scroll to it; hover for a magnifying loupe.
+- A receipt prints the résumé at a glance (experience is counted live from Mar 2025) and ends with a barcode.
+- **Preview** opens a full-screen PDF viewer (phones get the page image + Open PDF); **Download PDF** saves it.
+</details>
+
+<a id="book"></a>
+
+<details>
+<summary><b>08 · Book a call</b>: straight into Google Calendar</summary>
+<br>
+<img src="assets/readme/book.jpg" alt="Book a call: topic, length and a calendar of open sessions" width="100%">
+
+- Five sessions each weekday from 10:00 IST with 30-minute breaks. Pick a topic, a length and a slot, and it opens a pre-filled Google Calendar invite with Priyangshu already invited.
+</details>
+
+<a id="footer"></a>
+
+<details>
+<summary><b>09 · Footer</b>: a live press conference</summary>
+<br>
+<img src="assets/readme/press.jpg" alt="Footer: a press conference with a giant inked PRIYANGSHU, the speaker at a table and a blue-to-orange crowd" width="100%">
+
+- A cobalt serif footer (contact rows, columns, a "Stay in the loop" box), then a press conference drawn as a line sketch: a giant hand-inked **PRIYANGSHU**, the bearded speaker at a press table, and seven rows of about **170 journalists** tinted from AakaarIO blue through purple to orange.
+- Click a journalist to ask a question; he turns to them and answers. Idle journalists ask on their own and cameras flash. LIVE tag, running timecode and a TV lower-third.
+- **Sound** (after one click, remembered on/off): questions and answers are **spoken aloud** with the browser's text-to-speech (different voices for journalists, a male English voice for Priyangshu, Indian-English when available), plus a reverberant press room, camera shutters, applause and a mic tap.
+</details>
+
+<a id="cast"></a>
+
+<details>
+<summary><b>✦ The cast</b>: rigged ink characters</summary>
+<br>
+
+- Original ink characters live on every section label: jointed legs, two-bone IK arms, a turning head and props that stay upright in their hands.
+- **Physics walk:** they accelerate and slow down, legs swing at a cadence tied to distance (no foot sliding), the body bobs on the planted foot, arms swing opposite and they lean into acceleration. Every joint is spring-smoothed.
+- **Reads as 3D:** side-on when walking (far limbs move behind and darken), head parallax, soft shading, a contact shadow under each foot, bouncing hair.
+- **Activities:** sip coffee, read and swipe a tablet, write on a clipboard, point at the badges, tap a foot, type on a stool, take a phone call, wave a sign…
+- **Play:** drag one and it swings like a pendulum, then drops with a squash and a puff of dust; click to make it jump and give a tip; hover and it waves. Hidden below 1000px.
+</details>
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ Try this
+
+- [ ] Click the name in the hero to scramble it into Bengali and Hindi
+- [ ] Click the teacup for a chai refill
+- [ ] Grab a journey badge and fling it
+- [ ] Press **Run eval**, then drag a threshold until the gate blocks v2
+- [ ] Click the **DBMS** book, then press **↻ new data** a few times
+- [ ] Hover the printed résumé with the loupe
+- [ ] Drag one of the little ink people off their line and let go
+- [ ] Turn on footer sound and click a journalist in the front row
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ Run it locally
+
+No build step and no dependencies. Serve the folder over HTTP:
 
 ```bash
 python -m http.server 5500
-# then open http://localhost:5500
+# open http://localhost:5500
 ```
 
-## Project structure
+<details>
+<summary>Any static server works</summary>
+
+```bash
+npx serve .          # Node
+php -S localhost:5500  # PHP
+```
+Opening `index.html` straight from disk mostly works too, but the résumé preview and audio behave best over HTTP.
+</details>
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ Make it yours
+
+Everything lives in `index.html` (markup, styles and scripts in one file).
+
+| To change | Look for |
+|---|---|
+| Résumé | replace `resume/Priyangshu_Dey_Resume.pdf`, then re-render page 1 to `resume/resume-page1.jpg` (snippet below) |
+| Current semester | `SEM = 8, cur = 7` in the semester-road script |
+| Subjects, topics, "In my work" | the `SUB` object; illustrations are in `SC` |
+| Press-conference questions | the `QA` array (and `OUTLETS` for the outlet names) |
+| Crowd rows / density | the `ROWS` array in the footer script |
+| Cast characters and their tips | the `CAST` array |
+| Link preview (LinkedIn, X, WhatsApp) | `og-image.png` and the `og:` meta tags in `<head>` |
+
+<details>
+<summary>Re-render the résumé preview image</summary>
+
+```bash
+pip install pypdfium2 pillow
+python -c "import pypdfium2 as p; pg=p.PdfDocument('resume/Priyangshu_Dey_Resume.pdf')[0]; pg.render(scale=1240/pg.get_width()).to_pil().convert('RGB').save('resume/resume-page1.jpg', quality=84, optimize=True)"
+```
+</details>
+
+<img src="assets/readme/divider.svg" width="100%" alt="">
+
+## ✦ Under the hood
+
+- **Vanilla HTML, CSS and JS**, no framework and no build. Inter, JetBrains Mono and Caveat from Google Fonts.
+- **Inline SVG everywhere:** the hero sketch (with a light displacement filter for the pencil look), the cast rigs (IK, springs, gait), the press conference and the subject simulations.
+- **Web Audio** for the press-room soundscape and **Web Speech** (`speechSynthesis`) for the spoken Q&A.
+- **Responsive:** checked at 375px, 768px, 1024px and desktop with no sideways scrolling; phones get a menu button and layouts that stack.
+- **Accessible:** keyboard support for badges, stack layers, books and journalists; `aria` labels on interactive drawings; respects `prefers-reduced-motion` (no idle animation, instant reveals, static illustrations).
+
+<details>
+<summary>Project structure</summary>
 
 ```text
 .
-├── index.html        # the portfolio: markup, styles and scripts in one file
-├── cities/           # images from an earlier version (unused)
-└── .backup/          # previous designs (glass site, paper site), safe to delete
+├── index.html              # the whole site: markup, styles, scripts
+├── favicon.svg             # the bearded ink speaker on a cobalt tile
+├── apple-touch-icon.png    # 180px icon for iOS home screens
+├── og-image.png            # 1200×627 link preview (LinkedIn Featured)
+├── resume/
+│   ├── Priyangshu_Dey_Resume.pdf
+│   └── resume-page1.jpg    # preview image of page 1
+├── assets/readme/          # this README's header, divider and screenshots
+└── cities/                 # images from an earlier version (unused)
 ```
+</details>
 
-## Tech
+<img src="assets/readme/divider.svg" width="100%" alt="">
 
-- Vanilla HTML, CSS and JS, with Inter and JetBrains Mono from Google Fonts.
-- The illustration is inline SVG with a light displacement filter for the pencil look.
-- Respects `prefers-reduced-motion`: no idle animation and instant reveals.
+## ✦ Credits
+
+- Hero illustration: a traced ink sketch supplied by the site owner (the cut-off sneaker toe was redrawn).
+- Tech logos: [Devicon](https://devicon.dev) and [Simple Icons](https://simpleicons.org).
+- Fonts: [Inter](https://rsms.me/inter/), [JetBrains Mono](https://www.jetbrains.com/lp/mono/) and [Caveat](https://fonts.google.com/specimen/Caveat) via Google Fonts.
+- Everything else (the cast, the press conference, the simulations, the icons) is drawn in code for this site.
+
+<div align="center">
+
+<br>
+
+<sub>Built in ink, one blue and a little orange · © 2026 Priyangshu Dey</sub>
+
+</div>
