@@ -806,6 +806,59 @@
   .sn { color: var(--ink3); } .slots button[aria-pressed="true"] .sn { color: #c9d4ff; } .sl { font-size: 11px; display: inline-flex; gap: 4px; align-items: center; } .sl svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; }
   .empty { font: 400 13px var(--mono); color: var(--ink3); }
   @media (max-width: 900px) { .booking { grid-template-columns: 1fr; padding: 22px; } }
+  /* ---------- responsive polish (all devices) ---------- */
+  html, body { overflow-x: clip; }
+  .booking > *, .learn > *, .about > *, .proj > *, .stackx > *, .ev-grid > *, .ev-detail > *, .rcol, .edu, .creds, .cred, .cr-tx, .subj { min-width: 0; }
+  .cr-tx b { overflow-wrap: anywhere; }
+  img, svg, video { max-width: 100%; }
+  .navmenu { display: none; position: relative; width: 40px; height: 40px; margin-left: 4px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; cursor: pointer; }
+  .navmenu i { position: absolute; left: 11px; right: 11px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .3s cubic-bezier(.3,1.3,.5,1), top .3s; }
+  .navmenu i:first-child { top: 14px; } .navmenu i:last-child { top: 22px; }
+  nav.top.open .navmenu i:first-child { top: 18px; transform: rotate(45deg); } nav.top.open .navmenu i:last-child { top: 18px; transform: rotate(-45deg); }
+  @media (max-width: 920px) {
+    .navmenu { display: block; }
+    nav.top.open { background: rgba(255,255,255,.97); border-bottom-color: var(--line); }
+    nav.top.open ul { display: grid; position: absolute; left: 0; right: 0; top: 64px; gap: 0; margin: 0; padding: 6px 24px 18px; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); animation: menuIn .25s ease; }
+    nav.top.open ul a { display: block; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 17px; color: var(--ink); }
+    nav.top.open ul li:last-child a { border-bottom: 0; }
+    @keyframes menuIn { from { opacity: 0; transform: translateY(-8px); } }
+  }
+  /* hero annotations on small laptops */
+  @media (min-width: 901px) and (max-width: 1240px) { .note { max-width: 210px; } .note small { white-space: normal; } .n1, .n3 { left: calc(100% + 14px); } }
+  /* bookshelf tooltips stay on screen */
+  .book:nth-child(-n+2) .full { left: -4px; transform: translateY(6px); }
+  .book:nth-child(-n+2):hover .full, .book:nth-child(-n+2):focus-visible .full { transform: translateY(0); }
+  @media (hover: none) { .book .full { display: none; } }
+  /* tablets */
+  @media (max-width: 900px) {
+    section { scroll-margin-top: 70px; }
+    .road { margin: 0 -2px; }
+  }
+  /* phones */
+  @media (max-width: 600px) {
+    .wrap { width: calc(100% - 36px); }
+    .books { gap: 3px; padding: 0 4px; height: 160px; }
+    .book { width: calc(var(--w) * .74); height: calc(var(--h) * .84); border-width: 1.6px; }
+    .book span { font-size: 10px; } .book.st span { padding: 4px 2px; }
+    .book.tl { margin-left: 6px; } .plant { display: none; }
+    .shelf-hint { font-size: 15px; }
+    .rd-l { font-size: 17px; } .rd-capl { font-size: 26px; } .rd-now { font-size: 26px; }
+    .cred { grid-template-columns: 44px 1fr; gap: 12px; padding: 18px 16px 16px; } .cr-ic svg { width: 44px; height: 44px; }
+    .subj { padding: 20px 16px 18px; } .subj h3 { margin-right: 76px; font-size: 21px; }
+    .sj-fig #sjSvg { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: thin; }
+    .sj-fig #sjSvg svg { min-width: 440px; }
+    .sj-re { margin-left: 0; }
+    .booking { padding: 16px; border-radius: 18px; } .cal { padding: 12px; }
+    .topics button small { display: none; }
+    .ev-detail pre { font-size: 11.5px; }
+    .btrack { padding: 0 44px; } .badges { scroll-snap-type: x proximity; } .bdg { scroll-snap-align: center; }
+    .ps-hint { display: none; }
+  }
+  @media (max-width: 380px) {
+    .book { width: calc(var(--w) * .68); } .book span { font-size: 9.5px; }
+    .topics { grid-template-columns: 1fr; }
+  }
+
   .bk-modal { position: fixed; inset: 0; z-index: 150; display: grid; place-items: center; padding: 16px; }
   .bk-back { position: absolute; inset: 0; background: rgba(17,17,17,.4); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
   .bk-box { position: relative; width: min(640px, 100%); background: #111; color: #eee; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 80px -20px rgba(0,0,0,.5); animation: bkpop .35s cubic-bezier(.2,.8,.2,1); }
@@ -828,7 +881,7 @@
 <nav class="top" id="nav" aria-label="Primary">
   <div class="wrap">
     <a class="brand" href="#top">Priyangshu Dey<span>.</span></a>
-    <ul>
+    <ul id="navList">
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#evals">Evals</a></li>
@@ -837,6 +890,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <a class="navcta" href="#book">Book a call ↗</a>
+    <button type="button" class="navmenu" id="navMenu" aria-expanded="false" aria-controls="navList" aria-label="Open menu"><i></i><i></i></button>
   </div>
 </nav>
 
@@ -1122,7 +1176,7 @@
               </g>
               <text class="rd-capl" x="578" y="40">Jun 2027</text>
               <g id="roadDot"><circle class="rd-pulse" r="12"/><circle class="rd-dot" r="6.5"/></g>
-              <g><path class="rd-arrow" id="roadArrow" d=""/><text class="rd-now" id="roadNow" text-anchor="middle">you are here</text></g>
+              <g><path class="rd-arrow" id="roadArrow" d=""/><text class="rd-now" id="roadNow" text-anchor="middle" x="480" y="40">you are here</text></g>
             </svg>
             <div class="rd-tip" id="roadTip" hidden></div>
           </div>
@@ -3031,6 +3085,16 @@
     }
   })();
 
+
+  // mobile menu
+  (function () {
+    var nav = document.getElementById('nav'), b = document.getElementById('navMenu'); if (!b) return;
+    function set(on) { nav.classList.toggle('open', on); b.setAttribute('aria-expanded', String(on)); b.setAttribute('aria-label', on ? 'Close menu' : 'Open menu'); }
+    b.addEventListener('click', function () { set(!nav.classList.contains('open')); });
+    nav.querySelectorAll('#navList a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+    addEventListener('resize', function () { if (innerWidth > 920) set(false); });
+  })();
   // odometer for the year
   document.querySelectorAll('.odo i').forEach(function (cell, k) {
     var strip = document.createElement('b'), d = +cell.getAttribute('data-d'), start = (d + 3 + k * 2) % 10;
