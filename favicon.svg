@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Priyangshu Dey</title>
+  <defs><clipPath id="t"><rect width="64" height="64" rx="15"/></clipPath></defs>
+  <g clip-path="url(#t)">
+    <rect width="64" height="64" fill="#1f4fff"/>
+    <g transform="translate(-306.4 -29.2) scale(.47)" stroke="#111" stroke-linecap="round" stroke-linejoin="round" fill="#fff">
+      <!-- black open shirt + white tee -->
+      <path d="M630 260 C632 210 668 186 720 184 C772 186 808 210 810 260Z" fill="#111" stroke-width="5"/>
+      <path d="M703 186 L707 260 H733 L737 186 C731 184 726 183.5 720 183.5 C714 183.5 709 184 703 186Z" stroke-width="4"/>
+      <!-- neck -->
+      <path d="M707 160 C708 170 707.5 178 705.5 186 C712 192 728 192 734.5 186 C732.5 178 732 170 733 160" stroke-width="5"/>
+      <g transform="translate(0 8)">
+        <!-- ears -->
+        <path d="M702 121 C694 117 689.5 123 690.5 130 C691.5 138 697 142 702.5 140" stroke-width="5"/>
+        <path d="M738 121 C746 117 750.5 123 749.5 130 C748.5 138 743 142 737.5 140" stroke-width="5"/>
+        <!-- face -->
+        <path d="M701 110 C701 99 709 93 720 93 C731 93 739 99 739 110 L739 140 C739 155 731 165 720 165 C709 165 701 155 701 140Z" stroke-width="5.5"/>
+        <!-- pompadour -->
+        <path d="M700 108 C696 99 697 90 703 86 C700 80 705 75 711 77 C713 71 721 69 726 73 C731 68 741 71 742 78 C749 79 752 86 748 92 C752 97 750 104 744 107 C742 103 738 99 732 98 C724 96 715 97 708 100 C704 102 701.5 105 700 108Z" fill="#111" stroke-width="4"/>
+        <path d="M711 92 C716 88.5 723 88 728 90.5" fill="none" stroke="#fff" stroke-width="3"/>
+        <!-- brows + eyes -->
+        <path d="M705 117 C708 113 714 112.5 718 114.5 M735 117 C732 113 726 112.5 722 114.5" fill="none" stroke-width="4.5"/>
+        <circle cx="711" cy="125" r="4" fill="#111" stroke="none"/><circle cx="729" cy="125" r="4" fill="#111" stroke="none"/>
+        <!-- beard + mustache with a smile -->
+        <path d="M701.5 134 C702.5 149 708 160 720 166 C732 160 737.5 149 738.5 134 C737 140 733.5 145 728.5 146.6 C725 143.6 715 143.6 711.5 146.6 C706.5 145 703 140 701.5 134Z" fill="#111" stroke-width="4"/>
+        <path d="M710 144.6 C713.5 140.6 718 140.6 720 142.4 C722 140.6 726.5 140.6 730 144.6 C726 145.4 722.6 146.6 720 146.6 C717.4 146.6 714 145.4 710 144.6Z" fill="#111" stroke-width="3"/>
+        <path d="M714 150 Q720 153.5 726 150" fill="none" stroke="#fff" stroke-width="3.2"/>
+      </g>
+    </g>
+    <!-- AakaarIO orange spark -->
+    <path d="M51 6 C51.6 10.6 53.4 12.4 58 13 C53.4 13.6 51.6 15.4 51 20 C50.4 15.4 48.6 13.6 44 13 C48.6 12.4 50.4 10.6 51 6Z" fill="#ff6b2c"/>
+  </g>
+</svg>

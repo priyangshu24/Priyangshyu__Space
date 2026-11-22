@@ -1,56 +1,49 @@
-# Priyangshu Dey · Portfolio
+# Priyangshu Dey
 
-A single-page, single-file portfolio site — no build step, no framework. Glassmorphism UI, GSAP-driven motion, a Three.js globe-to-city walk, an ASCII terminal intro, a "Dev Arcade," a Google Calendar booking flow, and a Claude-powered AI twin.
-
-**Live:** open `index.html` through a local server (see below) — this is a static site with no deployed URL configured yet.
+A minimal white portfolio: lots of white space, one blue (#1f4fff) and an ink sketch of a young man sketching in a notebook on a wooden chair.
 
 ## Features
 
-- **Hero terminal intro** — animated ASCII/typing sequence introducing the site.
-- **Interactive globe** — Three.js scene that transitions from a rotating globe into dotted city photos (`cities/c1.jpg`–`c10.jpg`), rendered as point clouds sampled from pixel data.
-- **Selected work** — case-study style project cards for *Sentinel* (LLMOps eval platform), *Orion* (AI-native CI/CD), and *COCO* (local-first AI desktop operator), each with a small live illustration (pipeline animation, voice waveform, etc.).
-- **AI twin** — a chat panel that answers questions in Priyangshu's voice. Falls back to pre-written answers by default; live answers are available when the page is opened as a Claude artifact and the visitor grants Claude access.
-- **Experience timeline** — animated scroll-linked timeline of roles at AI Data Craft Tech / Adhyaapak.
-- **Stack panels** — categorized chips for languages, AI/ML, frontend, backend, cloud & data, and mobile.
-- **Book a call** — a real booking calendar (5 slots/weekday, IST-based, configurable duration) that deep-links into Google Calendar with the event pre-filled.
-- **Dev Arcade** — a small collection of interactive dev-themed mini experiences (see `index.html` for details).
+- **Hero background:** a static faded orange dot grid, soft drifting orange glows, and a soft orange-to-amber glow band in the lower hero that drifts on its own (no cursor reactions). It carries on past the hero and fades into the About section, and pauses when the hero is off screen.
+- **Interactive hero:** a status pill ("open to internships & collabs"), the name as the headline with a hand-drawn orange underline (each letter gets heavier as your cursor gets close; click it, or the EN / Bengali / Hindi switch, to scramble it into Bengali and Hindi script), and "Building AI that ships." revealed letter by letter.
+  - The roles are handwritten annotations with drawn arrows pointing into the sketch: Founder & CEO → the AakaarIO badge, AI Engineer → the idea sketches, Full-Stack Developer → the teacup. Hovering one lights up its part of the sketch, and clicking it acts on that part.
+  - The drawing inks itself in when the page loads, and his head turns slightly toward your cursor.
+  - A blue-ink lens follows your cursor across the drawing.
+  - Blue idea sketches draw themselves from his pen (an agent graph, an API, a rising chart, a rocket), and a caption says what he's sketching.
+  - Click him and he talks in a speech bubble. Click the blue "A" badge on his sleeve for AakaarIO, or click the teacup for a chai refill.
+- **Illustration source:** a traced ink sketch (`sketch_traced.svg`) that the owner supplied, embedded inline. The cut-off toe of the left sneaker was redrawn to complete it.
+- **Journey as ID badges:** each role is an employee ID badge hanging on a lanyard from a rail (Full-Stack Developer Intern, stamped COMPLETED; Software Engineer Intern, stamped PROMOTED; Founder & CEO of AakaarIO on an orange strap, stamped FOUNDER). They sway on their own, swing when your cursor brushes them, can be grabbed and dragged to swing harder, and flip over on click or Enter to show what you did and the stack. The arrow keys nudge them.
+- **The stack:** an isometric pile of six layers (Languages → Cloud & data → Backend → AI / ML → Frontend → Mobile). Hover, tap, focus or use the arrow keys to lift a layer: its tech logos stand on top of it and a detail panel shows what it's for and where it's used. It tours itself until you interact.
+- **Footer:** a deep cobalt footer in serif type: star logo, italic tagline, contact rows, social icons, Explore / Projects / Connect columns, a "Stay in the loop" email box (no backend, so it drafts an email to Priyangshu) and a legal row. Below it, on white paper with a hand-drawn edge, is a **live press conference drawn as a line sketch** (ink outlines, pencil wobble and grey hatching like the hero, with blue and orange accents only): a giant full-width PRIYANGSHU in hand-inked blue outline letters with hatching behind the stage, with the stage, table and crowd overlapping its lower part (letters lift and warm under the cursor; click for a wave and camera flashes). Priyangshu, drawn in bold minimal ink (wavy pompadour, short beard, black open shirt over a white tee), sits at a press table under spotlights with a laptop and microphones. His eyes follow the cursor, he blinks, grins when you hover his face, and winks and says hi when you click it. He is facing seven rows of about 170 journalists in perspective, each tinted on a blend from AakaarIO blue (left) through purple to orange (right), with back rows paler for depth and a faint blue-to-orange wash behind them, with hazy back rows, rim-lit heads, glowing phones, cameras and TV cameras on tripods. Hover a journalist to raise a hand, click to ask a question; he turns toward them and the answer types out (facts from the site). While idle, journalists ask on their own and cameras flash. Broadcast touches: a LIVE tag with a running timecode, and a TV-style lower-third (name, title and the question being answered) that slides in during each answer. **Sound** (Web Audio, footer only, after one click, with a remembered Sound on/off toggle): questions and answers are spoken aloud with the browser's text-to-speech (journalists rotate through different voices; Priyangshu answers in a male English voice, preferring an Indian-English one when available) and the answer types out in sync with the speech; if no voices are available it falls back to a synthetic murmur. Also a reverberant press room with speech-like crowd chatter in stereo that hushes while he answers, a short voice for each question from the journalist's side of the room (rising at the end), his answers through the stage PA, camera shutters on every flash with an occasional flash recharge whine, applause when the name is clicked, and a mic tap when the footer first comes into view.
+- **Sections:** About (AakaarIO and stats), Selected Work (Sentinel, Orion, COCO), How LLM evals work, Journey, Toolkit, Education & credentials, Book a call, and Contact.
+- **LLM evals lab:** an interactive workflow diagram, plus an eval run you can play with (8 test cases, threshold sliders, a ship/block gate, failure clusters, and a v1 vs v2 chart with a table view).
+- **Book a call:** 5 sessions per weekday from 10:00 IST with 30-minute breaks. Choosing a slot opens a pre-filled Google Calendar invite and shows a terminal-style confirmation.
+- **Education (Always learning):** drawn as a study desk. The degree is a hand-inked road of eight semesters (S1 to S8) that draws itself with an orange pen dot up to the current, final semester (S8, marked "you are here"), then a dotted path to a graduation cap with a swinging tassel (Jun 2027); hover a checkpoint for its status. The current semester is set in the code (`SEM` / `cur` in the road script). Core subjects are books on a shelf: hover a spine for the full name, click one to open its details in the right column: summary, topics, an "In my work" note where a project uses it, and three illustrations per subject that rotate automatically (every 13s, paused on hover) with tabs and a "new data" button. Most are live simulations with fresh random data on every run, and the topics each scene demonstrates light up. DSA: binary search on a BST and a sorted array, bubble sort, BFS on a random graph. OOP: class diagram, encapsulation (a BankAccount whose private balance only changes through methods), polymorphic area() calls. DBMS: query pipeline + ER model, B+ tree index lookups, a transfer transaction that sometimes crashes and rolls back. OS: kernel layers, round-robin scheduling with a live Gantt chart, paging with FIFO page faults. Networks: TCP/IP stacks, a TCP handshake with occasional packet loss and retransmit, Dijkstra routing on random link costs. System Design: load-balanced architecture, an LRU cache with hit rate, consistent hashing on a ring. ML: training loop, gradient descent with different learning rates, live linear regression. AI: agent loop, A* on a random maze, minimax on a random game tree. Data Mining: KDD pipeline, live k-means, Apriori association rules. Back or Esc returns to the credentials. Credentials (MERN Full-Stack Web Development, Full Stack Development: Zomato App) are certificate cards taped to the wall with line-sketch icons.
+- **The cast:** small original ink characters (bold black-and-white style) live on the section labels at different spots (left, middle, right). Each is a real rig: jointed legs with knees and feet, two-bone IK arms, a head that turns, and props held in the hands that stay upright (coffee cup, tablet, clipboard and pen, phone, laptop, sign). Walking is physics-driven: they speed up and slow down, turn to face where they are going, legs swing with knee bend at a cadence tied to distance (so planted feet don't slide), the body bobs because the lower foot always stays on the ground, arms swing opposite the legs, and they lean into acceleration. Every joint is spring-smoothed, so moves blend with follow-through. They read as 3D: when walking they turn side-on (body narrows, legs and shoulders come together under them, the far arm and leg move behind the torso and shade slightly darker), while for activities the body stays square and only the head turns. Heads rotate with parallax (the nose shifts more than the eyes, the far ear tucks away, the near ear slides back), there is soft shading on the side away from the light, a contact shadow under each foot that fades as the foot lifts, hair that lags and bounces, and a slight shoulder/hip twist in the walk. Each character has a weighted mix of activities it cycles through: About sips coffee, checks a watch, stretches and yawns, looks around; Work walks while reading and swiping the tablet; Evals writes (the ink appears as the pen moves) and taps the pen to their chin; Journey strolls, points at the badges, checks a phone and waves, hands in pockets when idle; Toolkit stands with hands on hips tapping a foot, points at the stack, thinks, scratches their head; Learning types on a stool, leans back with hands behind the head, and gets up to stretch; Book a call waves, takes a phone call, checks the time; Contact bobs a sign (hi! / say hi / hello!) and waves with it lowered. Grab one and they hang from where you grabbed them like a pendulum, legs and arms flailing; let go and they fall and land with a squash and a puff of dust. Click to jump (crouch, take off, land) and get a tip. Hover and they stop, face you, smile and wave with a free hand. Eyes follow the cursor; they blink and breathe. Hidden below 1000px; still for reduced motion.
+- **Favicon:** `favicon.svg` (the bearded ink speaker from the footer on a cobalt tile with an AakaarIO orange spark) plus `apple-touch-icon.png` (180px) for iOS home screens.
+- **Orange accents (used sparingly):** a reading-progress bar along the top, orange markers on section labels and stats, faint orange dot-grain patches in a few section corners (Work, Toolkit, Book, Contact), a soft glow behind Contact, and orange hover touches on project numbers, chips and outline buttons.
+- **Real tech logos:** shown in grayscale, turning to full colour on hover. Loaded from Devicon, with Simple Icons as the fallback.
 
 ## Getting started
 
-The dotted city visuals read raw pixel data from the images in `cities/`, and browsers block that (CORS/canvas tainting) when the file is opened directly (`file://`). Serve it over HTTP instead:
+There is no build step. Serve the folder over HTTP:
 
 ```bash
-# from this folder
 python -m http.server 5500
 # then open http://localhost:5500
 ```
 
-Or in VS Code: install the **Live Server** extension, then right-click `index.html` → **Open with Live Server**.
-
-No dependencies to install and no build step — everything ships in one HTML file.
-
 ## Project structure
 
-```
+```text
 .
-├── index.html      # entire site: markup, styles, and JS in one file
-├── cities/         # c1.jpg … c10.jpg — greyscale city photos for the dotted-globe backgrounds
-└── README.md
+├── index.html        # the portfolio: markup, styles and scripts in one file
+├── cities/           # images from an earlier version (unused)
+└── .backup/          # previous designs (glass site, paper site), safe to delete
 ```
 
 ## Tech
 
-- Vanilla HTML/CSS/JS — no bundler, no framework.
-- [GSAP 3.12.5](https://gsap.com/) for scroll reveals, transitions, and micro-interactions.
-- [three.js r128](https://threejs.org/) for the WebGL globe and city-walk scene.
-- Loaded via CDN (cdnjs) — see the `<script>` tags at the top of `index.html`.
-
-## Notes
-
-- **AI twin:** outside of Claude, it only uses pre-written answers. Live Claude-generated answers work only when the page is opened as a Claude artifact.
-- **Photo credits:** city photos are sourced from Wikimedia Commons under CC licenses; credits are listed in the page footer. Keep them if you fork or deploy this site.
-- **Booking flow:** slot state is kept in `localStorage` on the visitor's own browser (`pd-bookings`) purely to avoid double-booking the same slot in one session — there's no backend.
-
-## License
-
-Content and code are personal portfolio material. Photo credits are as noted in the footer; please retain them if you reuse this project.
+- Vanilla HTML, CSS and JS, with Inter and JetBrains Mono from Google Fonts.
+- The illustration is inline SVG with a light displacement filter for the pencil look.
+- Respects `prefers-reduced-motion`: no idle animation and instant reveals.
